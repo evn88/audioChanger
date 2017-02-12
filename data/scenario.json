@@ -1,0 +1,15 @@
+{
+  "start": {
+    "default": "BonJovi",
+    "yes": {
+      "default": "",
+      "yes": "",
+      "no": ""
+    },
+    "no": {
+      "default": "",
+      "yes": "",
+      "no": ""
+    }
+  }
+}
