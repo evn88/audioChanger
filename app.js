@@ -1,6 +1,10 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     var audio = $("#player")[0];
     var dataPath = "data/audio/";
+
+    var scenario;
+
+    //scenario = JSON.parse(data);
 
 
     $("#start").on('click', function () {
@@ -11,15 +15,29 @@ $( document ).ready(function() {
 
 
     $(".yes").click(function () {
-       audio.play();
+        audio.play();
     })
     $(".no").click(function () {
         audio.pause();
     })
 });
 
-function scenario() {
-    return $.getJSON('data/scenario.json');
+function iterator (obj, callback){
+    var item, index=0, length=obj.length;
+    
+    for(; index < length; index++){
+        item = obj[index];
+        if (Object.prototype.toString.call === '[object Object]') {
+            iterator(item, callback);
+        }
+        else{
+            callback(item);
+        }
+    }
 }
 
-console.log(scenario());
+function callback(item){
+    console.log(item);
+}
+
+iterator()

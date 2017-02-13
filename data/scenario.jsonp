@@ -1,15 +1,15 @@
-{
+var data =({
   "start": {
     "default": "BonJovi",
     "yes": {
-      "default": "",
+      "default": "level2_yes",
       "yes": "",
       "no": ""
     },
     "no": {
-      "default": "",
+      "default": "level2_no",
       "yes": "",
       "no": ""
     }
   }
-}
+});
