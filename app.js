@@ -24,14 +24,16 @@ $(document).ready(function () {
 
 function iterator (obj, callback){
     var item, index=0, length=obj.length;
-    
+
     for(; index < length; index++){
         item = obj[index];
         if (Object.prototype.toString.call === '[object Object]') {
             iterator(item, callback);
+            console.log('Object iteration');
         }
         else{
             callback(item);
+            console.log('else iteration');
         }
     }
 }
@@ -40,4 +42,4 @@ function callback(item){
     console.log(item);
 }
 
-iterator()
+iterator(data, callback);

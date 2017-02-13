@@ -3,7 +3,27 @@ var data =({
     "default": "BonJovi",
     "yes": {
       "default": "level2_yes",
-      "yes": "",
+      "yes": {
+        "default": "def",
+        "yes": {
+          "default": "def",
+          "yes": {
+            "default": "defno",
+            "yes": {},
+            "no": {}
+          },
+          "no":{
+            "default": "defno",
+            "yes": {},
+            "no": {}
+          }
+        },
+        "no": {
+          "default": "",
+          "yes": {},
+          "no": {}
+        }
+      },
       "no": ""
     },
     "no": {
